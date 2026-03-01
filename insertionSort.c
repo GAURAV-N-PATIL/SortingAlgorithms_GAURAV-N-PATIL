@@ -14,7 +14,7 @@ void insertionSort(int arr[],int n)
         return;
     }
 
-    int i,j,key;
+    int i,j,key,k;
 
     for(i=1;i<n;i++)
     {
@@ -30,7 +30,7 @@ void insertionSort(int arr[],int n)
         arr[j+1]=key;
 
         printf("After insertion %d:",i);
-        for(int k=0;k<n;k++)
+        for(k=0;k<n;k++)
             printf("%d ",arr[k]);
         printf("\n");
     }
@@ -49,15 +49,16 @@ int main()
     }
 
     int arr[100];
+    int i;
 
     printf("Enter elements:\n");
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
         scanf("%d",&arr[i]);
 
     insertionSort(arr,n);
 
     printf("Sorted Output:");
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
         printf("%d ",arr[i]);
     printf("\n");
 

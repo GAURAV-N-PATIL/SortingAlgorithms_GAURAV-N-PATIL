@@ -39,7 +39,7 @@ void selectionSort(int arr[],int n)
 
 int main()
 {
-    int n;
+    int n,i;
     printf("Enter number of elements:");
     scanf("%d",&n);
 
@@ -51,13 +51,13 @@ int main()
 
     int arr[100]; 
     printf("Enter elements:\n");
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
         scanf("%d",&arr[i]);
 
     selectionSort(arr,n);
 
     printf("Sorted Output:");
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
         printf("%d ",arr[i]);
     printf("\n");
 
