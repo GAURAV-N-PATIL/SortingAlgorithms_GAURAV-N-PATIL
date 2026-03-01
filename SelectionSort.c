@@ -49,8 +49,7 @@ int main()
         return 0;
     }
 
-    int arr[100]; // Assuming maximum size of array is 100
-
+    int arr[100]; 
     printf("Enter elements:\n");
     for(int i=0;i<n;i++)
         scanf("%d",&arr[i]);
