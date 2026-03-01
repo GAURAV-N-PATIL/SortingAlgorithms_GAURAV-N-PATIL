@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 
 void selectionSort(int arr[],int n)
 {
@@ -10,7 +10,7 @@ void selectionSort(int arr[],int n)
 
     if(n==1)
     {
-        printf("Single element array: %d\n",arr[0]);
+        printf("Single element array:%d\n",arr[0]);
         return;
     }
 
@@ -19,9 +19,10 @@ void selectionSort(int arr[],int n)
     for(i=0;i<n;i++)
     {
         min=i;
+
         for(j=i+1;j<n;j++)
         {
-            if (arr[j]<arr[min])
+            if(arr[j]<arr[min])
                 min=j;
         }
 
@@ -29,28 +30,36 @@ void selectionSort(int arr[],int n)
         arr[i]=arr[min];
         arr[min]=temp;
 
-        printf("After pass %d: ", i + 1);
-        for (j = 0; j < n; j++)
-            printf("%d ", arr[j]);
+        printf("After pass %d:",i+1);
+        for(j=0;j<n;j++)
+            printf("%d ",arr[j]);
         printf("\n");
     }
 }
 
 int main()
 {
-    int arr[] = {64, 25, 12, 22, 11};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n;
+    printf("Enter number of elements:");
+    scanf("%d",&n);
 
-    printf("Input: ");
-    for (int i = 0; i < n; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
+    if(n<=0)
+    {
+        selectionSort(NULL,0);
+        return 0;
+    }
 
-    selectionSort(arr, n);
+    int arr[100]; // Assuming maximum size of array is 100
 
-    printf("Sorted Output: ");
-    for (int i = 0; i < n; i++)
-        printf("%d ", arr[i]);
+    printf("Enter elements:\n");
+    for(int i=0;i<n;i++)
+        scanf("%d",&arr[i]);
+
+    selectionSort(arr,n);
+
+    printf("Sorted Output:");
+    for(int i=0;i<n;i++)
+        printf("%d ",arr[i]);
     printf("\n");
 
     return 0;
