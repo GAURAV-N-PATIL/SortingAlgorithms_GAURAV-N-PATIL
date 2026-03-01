@@ -59,7 +59,10 @@ The array is displayed after each insertion step.
 ---
 
 ## Sample Input
-
+Insertion sort
+![output 1](</images/Screenshot 2026-03-01 133638.png>) 
+Selection sort
+![output 2](</images/Screenshot 2026-03-01 133529.png>)
 ---
 
 ## Technologies Used
